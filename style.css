@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: hsl(222, 26%, 31%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerT2 {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.containerT3 {
+    background-color: hsl(268, 75%, 9%);
+}
+
+.calculatorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 37vw;
+}
+
+.headerTitle {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.5vw;
+    color: hsl(0, 0%, 100%);
+    margin-left: 5vw;
+}
+
+.headerTitleT2 {
+    color: hsl(60, 10%, 19%);
+}
+
+.headerTitleT3 {
+    color: hsl(52, 100%, 62%);
+}
+
+.text {
+    font-family: "League Spartan", sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-size: 0.75vw;
+    margin-left: 0.35vw;
+}
+
+.textT2 {
+    color: hsl(60, 10%, 19%);
+}
+
+.textT3 {
+    color: hsl(52, 100%, 62%);
+}
+
+.themes {
+    display: flex;
+    align-items: center;
+    margin-right: 5.25vw;
+}
+
+.themesBtns {
+    display: grid;
+    grid-template-columns: 1.35vw 1.35vw 1.35vw;
+    margin-left: 2vw;
+}
+
+.themesChoices {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: hsl(223, 31%, 20%);
+    width: 4.25vw;
+    height: 1.55vw;
+    margin-bottom: 1.75vw;
+    margin-left: -0.25vw;
+    border: none;
+    border-radius: 1vw;
+}
+
+.themesChoicesT2 {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.themesChoicesT3 {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.themeButton {
+    display: block;
+    position: relative;
+    padding-left: 1vw;
+    margin-bottom: 0.95vw;
+    cursor: pointer;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2vw;
+}
+
+.themeButton input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.themeCheckmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1vw;
+    width: 1vw;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.active-btn {
+    background-color: hsl(6, 63%, 50%);
+}
+
+.active-btnT2 {
+    background-color: hsl(25, 98%, 40%);
+}
+
+.active-btnT3 {
+    background-color: hsl(176, 100%, 44%);
+}
+
+.outputArea {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: hsl(224, 36%, 15%);
+    height: 6vw;
+    width: 28vw;
+    border-radius: 0.5vw;
+    margin-bottom: 1.25vw;
+}
+
+.outputAreaT2 {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.outputAreaT3 {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.result {
+    color: hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: none;
+    font-size: 2.75vw;
+    font-family: "League Spartan", sans-serif;
+    margin-right: 2vw;
+    width: 20vw;
+    text-align: right;
+}
+
+.resultT2 {
+    color: hsl(60, 10%, 19%);
+}
+
+.resultT3 {
+    color: hsl(52, 100%, 62%);
+}
+
+.buttonsArea {
+    background-color: hsl(223, 31%, 20%);
+    width: 28vw;
+    height: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5vw;
+}
+
+.buttonsAreaT2 {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.buttonsAreaT3 {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.buttons {
+    width: 25vw;
+    height: 21vw;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 5.25vw 5.25vw 5.25vw 5.25vw;
+    gap: 1.25vw;
+    margin-left: 0.2vw;
+}
+
+.btn {
+    font-family: "League Spartan", sans-serif;
+    font-size: 2vw;
+    border-radius: 0.5vw;
+    border-color: transparent;
+    border-bottom: 0.3vw hsl(28, 16%, 65%) inset;
+    color: hsl(221, 14%, 31%);
+    background-color: hsl(30, 25%, 89%);
+    cursor: pointer;
+}
+
+.btnT2 {
+    background-color: hsl(45, 7%, 89%);
+    border-bottom: 0.3vw hsl(35, 11%, 61%) inset;
+    color: hsl(60, 10%, 19%);
+}
+
+.btnT3 {
+    background-color: hsl(268, 47%, 21%);
+    border-bottom: 0.3vw hsl(290, 70%, 36%) inset;
+    color: hsl(52, 100%, 62%)
+}
+
+.resetBtn {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.5vw;
+    border-radius: 0.5vw;
+    border-color: transparent;
+    border-bottom-width: 0.3vw;
+    border-bottom-color: hsl(224, 28%, 35%);
+    border-bottom-style: inset;
+    background-color: hsl(225, 21%, 49%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.resetBtnT2 {
+    background-color: hsl(185, 42%, 37%);
+    border-bottom-width: 0.3vw;
+    border-bottom-color: hsl(185, 58%, 25%) !important;
+    border-bottom-style: inset;
+}
+
+.resetBtnT3 {
+    background-color: hsl(281, 89%, 26%);
+    border-bottom-width: 0.3vw;
+    border-bottom-color: hsl(285, 91%, 52%) !important;
+    border-bottom-style: inset;
+}
+
+.equalBtn {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.5vw;
+    border-radius: 0.5vw;
+    border-color: transparent;
+    border-bottom-width: 0.3vw;
+    border-bottom-color: hsl(6, 70%, 34%);
+    border-bottom-style: inset;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(6, 63%, 50%);
+    cursor: pointer;
+}
+
+.equalBtnT2 {
+    background-color: hsl(25, 98%, 40%);
+    border-bottom-width: 0.3vw;
+    border-bottom-color: hsl(25, 99%, 27%) !important;
+    border-bottom-style: inset;
+}
+
+.equalBtnT3 {
+    background-color: hsl(176, 100%, 44%);
+    border-bottom-width: 0.3vw;
+    border-bottom-color: hsl(177, 92%, 70%) !important;
+    border-bottom-style: inset;
+    color: hsl(198, 20%, 13%);
+}
+
+.deleteBtn {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.5vw;
+    border-radius: 0.5vw;
+    border-color: transparent;
+    border-bottom-width: 0.3vw;
+    border-bottom-color: hsl(224, 28%, 35%);
+    border-bottom-style: inset;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(225, 21%, 49%);
+    cursor: pointer;
+}
+
+.deleteBtnT2 {
+    background-color: hsl(185, 42%, 37%);
+    border-bottom-width: 0.3vw;
+    border-bottom-color: hsl(185, 58%, 25%) !important;
+    border-bottom-style: inset;
+}
+
+.deleteBtnT3 {
+    background-color: hsl(281, 89%, 26%);
+    border-bottom-width: 0.3vw;
+    border-bottom-color: hsl(285, 91%, 52%) !important;
+    border-bottom-style: inset;
+}
+
+.deleteBtn:hover,
+.resetBtn:hover {
+    background-color: #a2b3e1;
+}
+
+.deleteBtnT2:hover,
+.resetBtnT2:hover {
+    background-color: #62b5bd;
+}
+
+.deleteBtnT3:hover,
+.resetBtnT3:hover {
+    background-color: #8631b0;
+}
+
+.equalBtn:hover,
+.active-btn:hover {
+    background-color: #f96c5b;
+}
+
+.equalBtnT2:hover,
+.active-btnT2:hover {
+    background-color: #ff8a38;
+}
+
+.equalBtnT3:hover,
+.active-btnT3:hover {
+    background-color: #94fff9;
+}
+
+.btn:hover,
+.btnT2:hover {
+    background-color: #ffffff;
+}
+
+.btnT3:hover {
+    background-color: #6b34ac;
+}
+
+
+/* Media queries for screen compatibility */
+@media only screen and (max-width: 481px) and (orientation: portrait) {
+    .calculator {
+        height: 90%;
+    }
+
+    .calculatorHeader {
+        width: 87.5vw;
+    }
+
+    .headerTitle {
+        font-size: 8vw;
+        margin-left: 2vw;
+        margin-bottom: 10vw;
+    }
+
+    .text {
+        font-size: 3vw;
+        margin-left: 2.5vw;
+    }
+
+    .themes {
+        margin-right: 2vw;
+    }
+
+    .themesBtns {
+        grid-template-columns: 5vw 5vw 5vw;
+        margin-left: 7vw;
+    }
+
+    .themesChoices {
+        width: 17vw;
+        height: 6vw;
+        margin-bottom: 9vw;
+        border-radius: 4vw;
+    }
+
+    .btnTheme {
+        width: 3.25vw;
+        height: 3.25vw;
+        border-radius: 1.5vw;
+    }
+
+    .themeButton {
+        margin-bottom: 4vw;
+        padding-left: 3.95vw;
+    }
+
+    .themeCheckmark {
+        height: 4vw;
+        width: 4vw;
+    }
+
+    .outputArea {
+        height: 13%;
+        width: 100%;
+        border-radius: 2.75vw;
+        margin-bottom: 5vw;
+    }
+
+    .result {
+        font-size: 10vw;
+        margin-right: 4.75vw;
+        width: 80vw;
+    }
+
+    .buttonsArea {
+        width: 100%;
+        height: 70%;
+        border-radius: 2.75vw;
+    }
+
+    .buttons {
+        width: 85%;
+        height: 85%;
+        grid-template-columns: 16.15vw 16.15vw 16.15vw 16.15vw;
+        gap: 3.25vw;
+    }
+
+    .btn {
+        font-size: 8.5vw;
+        border-radius: 1.5vw;
+        border-bottom: 1vw hsl(28, 16%, 65%) inset;
+    }
+
+    .resetBtn,
+    .deleteBtn {
+        font-size: 5vw;
+        border-radius: 1.5vw;
+        border-bottom-width: 1vw;
+    }
+
+    .equalBtn {
+        font-size: 5vw;
+        border-radius: 1.5vw;
+        border-bottom-width: 1vw;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1025px) and (orientation: portrait) {
+    .calculator {
+        height: 90%;
+    }
+
+    .calculatorHeader {
+        width: 87.5vw;
+    }
+
+    .headerTitle {
+        font-size: 7vw;
+        margin-left: 2vw;
+        margin-bottom: 10vw;
+    }
+
+    .text {
+        font-size: 2.5vw;
+        margin-left: 2.5vw;
+    }
+
+    .themes {
+        margin-right: 2vw;
+    }
+
+    .themesBtns {
+        grid-template-columns: 5vw 5vw 5vw;
+        margin-left: 7vw;
+    }
+
+    .themesChoices {
+        width: 17vw;
+        height: 6vw;
+        margin-bottom: 9vw;
+        border-radius: 4vw;
+    }
+
+    .btnTheme {
+        width: 3.25vw;
+        height: 3.25vw;
+        border-radius: 1.5vw;
+    }
+
+    .themeButton {
+        margin-bottom: 4vw;
+        padding-left: 3.95vw;
+    }
+
+    .themeCheckmark {
+        height: 4vw;
+        width: 4vw;
+    }
+
+    .outputArea {
+        height: 13%;
+        width: 100%;
+        border-radius: 2.75vw;
+        margin-bottom: 5vw;
+    }
+
+    .result {
+        font-size: 10vw;
+        margin-right: 4.75vw;
+        width: 80vw;
+    }
+
+    .buttonsArea {
+        width: 100%;
+        height: 63%;
+        border-radius: 2.75vw;
+    }
+
+    .buttons {
+        width: 85%;
+        height: 85%;
+        grid-template-columns: 16.15vw 16.15vw 16.15vw 16.15vw;
+        gap: 3.25vw;
+    }
+
+    .btn {
+        font-size: 8.5vw;
+        border-radius: 1.5vw;
+        border-bottom: 1vw hsl(28, 16%, 65%) inset;
+    }
+
+    .resetBtn,
+    .deleteBtn {
+        font-size: 5vw;
+        border-radius: 1.5vw;
+        border-bottom: 1vw hsl(224, 28%, 35%) inset;
+    }
+
+    .equalBtn {
+        font-size: 5vw;
+        border-radius: 1.5vw;
+        border-bottom: 1vw hsl(6, 70%, 34%) inset;
+    }
+}

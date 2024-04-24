@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator">
+      <div class="calculatorHeader"> <!-- Section 1 -->
+        <h2 class="headerTitle">calc</h2>
+        <div class="themes">
+          <p class="text">THEME</p>
+          <div class="themesBtns">
+            <p class="text">1</p>
+            <p class="text">2</p>
+            <p class="text">3</p>
+            <div class="themesChoices">
+              <label class="themeButton">
+                <input type="radio" name="themeOption" />
+                <span class="themeCheckmark active-btn" id="themeOne"></span>
+              </label>
+
+              <label class="themeButton">
+                <input type="radio" name="themeOption" />
+                <span class="themeCheckmark" id="themeTwo"></span>
+              </label>
+
+              <label class="themeButton">
+                <input type="radio" name="themeOption" />
+                <span class="themeCheckmark" id="themeThree"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div> <!-- END Section 1 -->
+
+      <div class="outputArea"> <!-- Section 2-->
+        <input type="text" id="display" class="result" readonly>
+      </div> <!-- END Section 2-->
+
+      <div class="buttonsArea"> <!-- Section 3-->
+        <div class="buttons">
+          <input type="button" value="7" class="btn" onclick="appendValue('7')">
+          <input type="button" value="8" class="btn" onclick="appendValue('8')">
+          <input type="button" value="9" class="btn" onclick="appendValue('9')">
+          <input type="button" value="DEL" class="deleteBtn" onclick="deleteLast()">
+          <input type="button" value="4" class="btn" onclick="appendValue('4')">
+          <input type="button" value="5" class="btn" onclick="appendValue('5')">
+          <input type="button" value="6" class="btn" onclick="appendValue('6')">
+          <input type="button" value="+" class="btn" onclick="appendValue('+')">
+          <input type="button" value="1" class="btn" onclick="appendValue('1')">
+          <input type="button" value="2" class="btn" onclick="appendValue('2')">
+          <input type="button" value="3" class="btn" onclick="appendValue('3')">
+          <input type="button" value="-" class="btn" onclick="appendValue('-')">
+          <input type="button" value="." class="btn" onclick="appendValue('.')">
+          <input type="button" value="0" class="btn" onclick="appendValue('0')">
+          <input type="button" value="/" class="btn" onclick="appendValue('/')">
+          <input type="button" value="x" class="btn" onclick="appendValue('*')">
+          <input type="button" value="RESET" class="resetBtn" onclick="reset()">
+          <input type="button" value="=" class="equalBtn" onclick="calculate()">
+        </div>
+      </div> <!-- END Section 3-->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
